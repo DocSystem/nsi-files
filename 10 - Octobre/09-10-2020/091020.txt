@@ -1,0 +1,31 @@
+Note :
+algèbre de bole :
+E = {0,1}
+soit a appartient à E
+1 ère opération binaie (non a se note a barre)
+
+L'opérateur + :
+soit a et b deux éléments de E = {0,1}
+on définit une fonction (a,b) -> a+b
+
+___[___a_____b___[__a__+__b___[___
+   [   0     0   [     0      [
+   [   0     1   [     1      [
+   [   1     0   [     1      [
+   [   1     1   [     1      [
+
+L'opéerateur x :
+soit a et b deux éléments de E = {0,1}
+on définit a.b de la manière suivante :
+
+___[___a_____b___[__a__x__b___[___
+   [   0     0   [     0      [            a.b ou a ET b
+   [   0     1   [     0      [            A U B
+   [   1     0   [     0      [
+   [   1     1   [     1      [
+
+___[___a_____b___[__a__+__b___[___
+   [   0     0   [     0      [
+   [   0     1   [     1      [
+   [   1     0   [     1      [
+   [   1     1   [     1      [
