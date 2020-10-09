@@ -21,17 +21,17 @@ def noircir(x,y):
 def effacer(x,y):
     can.create_rectangle(x*scale,y*scale,x*scale+scale,y*scale+scale,fill="light gray")
 def mettre_texte(x,y,text):
-    can.create_text(x*scale+0.5*scale,y*scale+0.5*scale,text=text,font="Arial14")
+    can.create_text(x*scale+0.5*scale,y*scale+0.5*scale,text=text,font="Arial14") # Sert à mettre du texte (argument text) dans une case choisie (arguments x et y)
 def tableau_aleatoire():
-    L_nombres=list(range(100))
-    D_nombres={}
-    for x in range(10):
-        for y in range(10):
-            i = randint(0, len(L_nombres)-1)
-            n = L_nombres[i]
-            del L_nombres[i]
-            D_nombres[(x,y)]=n
-    return D_nombres
+    L_nombres=list(range(100)) # On crée une liste avec les nombres de 0 à 99
+    D_nombres={} # On crée un dictionnaire pour sauvegarder les cases
+    for x in range(10): # On itère 10 fois pour 10 positions x différentes
+        for y in range(10): # On itère 10 fois pour 10 positions y différentes
+            i = randint(0, len(L_nombres)-1) # On prend un emplacement au hasard dans la liste des nombres
+            n = L_nombres[i] # On sauvegarde le nombre à l'emplacement choisi dans la variable n
+            del L_nombres[i] # On supprime le nombre à l'emplacement choisi de la liste des nombres afin qu'il ne soit pas re-choisi plus tard
+            D_nombres[(x,y)]=n # On sauvegarde le nombre et son emplacement dans le dictionnaire des cases
+    return D_nombres # On renvoit le dictionnaire des cases
 
 def carre_magique():
     L_nombres=list(range(Nombre_de_cases**2))
@@ -41,10 +41,10 @@ def carre_magique():
 
 def grille():
     initialisation()
-    #tbl = tableau_aleatoire()
-    tbl = carre_magique()
-    for i in tbl:
-        mettre_texte(i[0],i[1],tbl[i])
+    tbl = tableau_aleatoire() # On sauvegarde le dictionnaire renvoyé par la fonction pour créer un tableau aleatoire dans une variable
+    #tbl = carre_magique()
+    for i in tbl: # On itère chaque élément du dictionnaire (qui correspond à chaque case)
+        mettre_texte(i[0],i[1],tbl[i]) # On mets le texte de l'élément actuel dans la case aux coordonnées correspondantes
     can.pack()
     fen.mainloop()
 grille()
