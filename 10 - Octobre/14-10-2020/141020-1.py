@@ -35,8 +35,16 @@ def ex2():
         print("ET(x,y) = NON(NON(x) OU NON (y))")
     else:
         print("ET(x,y) != NON(NON(x) OU NON (y))")
-ex2()
+#ex2()
 
-# Exercice 3
+# Exercice 3.1
 def sheffer(x, y):
     return non(et(x,y))
+# Exercice 3.2
+def ex3_2():
+    x=1
+    if (non(x)==sheffer(x,x)):
+        print("NON(x) = S(x, x)")
+    else:
+        print("NON(x) != S(x, x)")
+#ex3_2()
