@@ -5,7 +5,7 @@ def et(x, y):
     return x*y
 def ou(x, y):
     return x+y-x*y
-def xou(x, y):
+def oux(x, y):
     return (x-y)**2
 def net(x,y):
     return non(x*y)
@@ -55,7 +55,19 @@ def mux(x, y, z):
 
 # Exercice 5.1
 def ex5():
+    x=1
+    y=1
+    z=1
     if (mux(x, y, z) == ou(et(non(x), y), et(x,z))):
         print("mux(x, y, z) = NON(x).y + x.z")
     else:
         print("mux(x, y, z) != NON(x).y + x.z")
+
+# Exercice 6.1
+def ex6():
+    x=1
+    y=1
+    if (oux(x, y) == mux(y, oux(x, 0), oux(x, 1))):
+        return True
+    else:
+        return False
