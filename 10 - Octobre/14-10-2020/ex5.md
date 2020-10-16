@@ -1,8 +1,8 @@
 # Exercice 5
 
-*Pour la fonction ``mux``, voir [exercice 4](ex4.md)*
+*Pour la fonction ``mux(x,y,z)``, voir [exercice 4](ex4.md)*
 
-# Exercice 5.1
+## Exercice 5.1
 
 
 
