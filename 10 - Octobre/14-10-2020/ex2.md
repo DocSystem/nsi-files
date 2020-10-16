@@ -1,4 +1,4 @@
-## Exercice 2
+# Exercice 2
 
 * En code :
 
