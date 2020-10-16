@@ -1,3 +1,10 @@
+## Exercice 4.1
+
+```py
+def mux(x, y, z):
+    return ou(et(x, y), et(non(x), z))
+```
+
 ## Exercice 4.2
 
 | x | y | z | NON(z) | x ET y | NON(x) et z | Sortie |
