@@ -1,3 +1,10 @@
+# 14 Octobre 2020
+
+## Code
+
+* [1er code](141020.py)
+* [2e code](141020-1.py)
+
 ## Exercices
 
 * [Exercice 1](ex1.md)
