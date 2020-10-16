@@ -52,3 +52,10 @@ def ex3_2():
 # Exercice 4.1
 def mux(x, y, z):
     return ou(et(x, y), et(non(x), z))
+
+# Exercice 5.1
+def ex5():
+    if (mux(x, y, z) == ou(et(non(x), y), et(x,z))):
+        print("mux(x, y, z) = NON(x).y + x.z")
+    else:
+        print("mux(x, y, z) != NON(x).y + x.z")
