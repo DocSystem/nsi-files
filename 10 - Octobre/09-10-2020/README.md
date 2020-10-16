@@ -2,4 +2,4 @@
 
 ## Cours
 
-* [Projet Tkinter](091020.txt)
+* [Cours](091020.txt)
