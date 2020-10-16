@@ -48,3 +48,7 @@ def ex3_2():
     else:
         print("NON(x) != S(x, x)")
 #ex3_2()
+
+# Exercice 4.1
+def mux(x, y, z):
+    return ou(et(x, y), et(non(x), z))
