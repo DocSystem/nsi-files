@@ -12,4 +12,4 @@
 * [Exercice 3](ex3.md)
 * [Exercice 4](ex4.md)
 * [Exercice 5](ex5.md)
-* [Exercice 6](ex5.md)
+* [Exercice 6](ex6.md)
