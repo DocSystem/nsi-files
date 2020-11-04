@@ -43,3 +43,7 @@ des systèmes en temps partagé.
 Ces deux évolutions font que la mémoire prenne plus d'importance, mais ne remettent
 pas en cause les principes de base que sont la séparation entre traitement et
 commande.
+
+### Crédits
+
+*Fait par Antoine O.*
