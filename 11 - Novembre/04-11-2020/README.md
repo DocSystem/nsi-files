@@ -3,3 +3,4 @@
 ## Exercices
 
 * [La machine de Von Neumann](von-neumann.md)
+* [Exercice addition bits](addition-bits.md)
