@@ -27,6 +27,8 @@ extérieur.
 De nos jour, longtemps après son invention, le modèle d’architecture de
 von Neumann régit toujours l’architecture des ordinateurs.
 
+## Evolution
+
 On peut cependant noter deux évolution:
 
 * Les ordinateurs possèdent maintenant de multiples processeurs, qu'ils s'agisse
