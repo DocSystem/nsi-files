@@ -1,4 +1,5 @@
 # Les fichiers du cours de NSI
+## 1ère - Lycée Hoche
 
 * Les fichiers de [Septembre](/09%20-%20Septembre/)
 * Les fichiers d'[Octobre](/10%20-%20Octobre/)
