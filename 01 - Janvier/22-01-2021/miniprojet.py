@@ -59,7 +59,7 @@ def miniprojet_search():
             print("\033[36m" + contact["nom"] + "\033[39m :")
             print("\033[32mNuméro\033[39m : " + contact["numero"])
             print("\033[32mAdresse\033[39m : " + contact["adresse"])
-            print("\033[32mAge\033[39m : " + contact["age"])
+            print("\033[32mAge\033[39m : " + str(contact["age"]) + " ans")
             print(" ")
     if (search_ok != True):
         print("\033[31mInconnu\033[39m") # Si aucun contact ne correspond on affiche "Inconnu"
