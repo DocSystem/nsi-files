@@ -1,3 +1,9 @@
+"""
+Owners:
+- Antoine Souben-Fink
+- Victor Dubost
+"""
+
 def miniprojet():
     # Affichage du menu
     print("\033[36m========== Répertoire ==========\033[39m")
