@@ -33,7 +33,7 @@ def miniprojet_getrepertoire():
     for l in f:
         l=l.strip("\n")
         infoarr = l.split(":")
-        repertoire.append({"nom": infoarr[0], "numero": infoarr[1], "adresse": infoarr[2], "age": int(infoarr[3])})
+        repertoire.append({"nom": infoarr[0], "prenom": infoarr[1], "numero": infoarr[2], "adresse": infoarr[3], "age": int(infoarr[4])})
     return repertoire
 
 # Ajouter un contact au répertoire
@@ -41,10 +41,11 @@ def miniprojet_add():
     f = open("repertoire.txt", "a") # Ouvrir le fichier
     nom = input("\033[32mNom (0 pour retourner au menu)\033[39m : ")
     if (nom != "0"): # Si on rentre zéro la fonction s'arrête et on revient au menu
+        prenom = input("\033[32mPrénom\033[39m : ")
         num = input("\033[32mNuméro de téléphone\033[39m : ")
         adresse = input("\033[32mAdresse\033[39m : ")
         age = input("\033[32mAge\033[39m : ")
-        f.write(nom + ":" + num + ":" + adresse + ":" + age + "\n") # On écrit dans le fichier du répertoire
+        f.write(nom + ":" + prenom + ":" + num + ":" + adresse + ":" + age + "\n") # On écrit dans le fichier du répertoire
         miniprojet_add() # On relance la fonction jusqu'a ce que l'utilisateur l'arrête en écrivant 0
 
 # Recherche par nom dans le répertoire
@@ -56,7 +57,7 @@ def miniprojet_search():
         if (contact["nom"] == nom): # Si le contact correspond au nom entré on affiche ses infos
             search_ok = True
             print(" ")
-            print("\033[36m" + contact["nom"] + "\033[39m :")
+            print("\033[36m" + contact["nom"] + " " + contact["prenom"] + "\033[39m :")
             print("\033[32mNuméro\033[39m : " + contact["numero"])
             print("\033[32mAdresse\033[39m : " + contact["adresse"])
             print("\033[32mAge\033[39m : " + str(contact["age"]) + " ans")
@@ -75,7 +76,7 @@ def miniprojet_byage():
     print("Contacts ayant entre " + str(agemin) + " et " + str(agemax) + " ans :")
     for contact in repertoire:
         if ((contact["age"] >= agemin) and (contact["age"] <= agemax)):
-            print(contact["nom"]) # Si le contact est contenu dans la tranche d'age rentrée on affiche son nom
+            print(contact["nom"] + " " + contact["prenom"]) # Si le contact est contenu dans la tranche d'age rentrée on affiche son nom
     print(" ")
 
 miniprojet() # On execute la fonction principale
