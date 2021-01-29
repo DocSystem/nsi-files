@@ -16,7 +16,9 @@ with open("libri.csv", newline="") as dbfile:
 Ensuite on affiche les oeuvres de Victor Hugo triées par ordre chronologique :
 
 ```py
-sortdb = sorted(db, key=lambda entry: entry["date"])
+def cle_date(d):
+    return d["date"]
+sortdb = sorted(db, key=cle_date)
 for entry in sortdb:
     if (entry["auteur"] == "Hugo Victor"):
         print(entry["titre"] + " : " + entry["date"])
