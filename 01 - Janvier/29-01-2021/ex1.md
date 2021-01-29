@@ -16,5 +16,7 @@ with open("libri.csv", newline="") as dbfile:
 Ensuite on trie la liste :
 
 ```py
-sorted(db, key=lambda entry: entry["date"])
+def cle_date(d):
+    return d["date"]
+sorted(db, key=cle_date)
 ```
