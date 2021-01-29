@@ -21,4 +21,4 @@ for entry in db:
     if (entry["auteur"] == "Flaubert Gustave"):
         titres.append(entry)
 print(titres)
-̀ ``
+```
