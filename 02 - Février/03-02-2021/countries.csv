@@ -1,0 +1,14 @@
+iso;name;Capital;Area;population;Continent;currency_code;currency_name;id
+AD;Andorra;Andorra la Vella ;4680;77006;EU;EUR;Euro;4
+AE;United Arab Emirates;AbuDhabi;82880;959;AS;AED;Dirham;7
+AF;Afghanistan;Kabul;64750037;386;AS;AFN;Afghani;10
+AG;Antigua and Barbuda;St.John's;443;96286;NA;XCD;Dollar;12
+AI;Anguilla;The Valley;1020;13254;NA;XCD;Dollar;11
+AL;Albania;Tirana;28748;866376;EU;ALL;Lek;9
+CA;Canada;Ottawa;99846700;37058856;NA;CAD;Dollar;8
+CN;China;Pekin;9596960.0;1.392730;AS;CNY;Yuan;6
+FR;France;Paris;547030.0;66987244;EU;EUR;Euro;1
+KR;South Korea;Seoul;98480.0;51635256;AS;KRW,Won;3
+LS;Lesotho;Maseru;303550;2108132;AF;LSL;Loti;5
+
+
