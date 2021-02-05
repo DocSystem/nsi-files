@@ -31,4 +31,4 @@ print(" ")
 
 # Question 7
 print("Noms des auteurs de nationalité française ayant écrit des romans :")
-print(resultat[resultat.nationalite == "français"][resultat.genre == "roman"].nom.unique())
+print(resultat[(resultat.nationalite == "français")&(resultat.genre == "roman")].nom.unique())
