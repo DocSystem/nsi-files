@@ -1,0 +1,15 @@
+id;nom;prenom;date_naissance;date_embauche;id_departement;statut
+
+1;Martin;Michel;1980;2000;1;cadre
+2;Dupont;Robert;1960;1990;1;non_cadre
+3;Lefrèvre;Alexandre;1985;2015;1;non_cadre
+
+4;Rousseau;Clément;1980;2005;2;non_cadre
+5;Muller;Jean;1982;2008;2;non_cadre
+6;Chevalier;Sebastien;1999;2018;2;cadre
+
+7;Leblanc;Laurent;1978;2001;3;non_cadre
+8;Rivière;Antoine;1995;2016;3;cadre
+
+9;Lemoine;Yanis;1982;2004;4;cadre
+10;Taylor;Paul;1975;2002;4;cadre

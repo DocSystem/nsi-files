@@ -1,0 +1,9 @@
+id;nom_projet;date_debut;date_fin;cout;chiffre_affaires
+
+1;fabrication_drone;1990;1992;70000;300000
+2;voiture_télécommandée;1992;1995;50000;350000
+3;participation_création_capteur_satellite;1995;2005;400000;600000
+4;drone_racing;2005;2010;100000;250000
+5;écran_plat_borne_sncf;2010;2015;150000;400000
+6;répéteur_wifi;2015;2017;45000;100000
+7;montre_connectée;2017;2020;275000;500000
