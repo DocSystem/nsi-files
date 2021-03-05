@@ -1,6 +1,6 @@
 import pandas as pd
 
-def menu():
+def menu(): # Menu
     print("======================== MENU ========================")
     print("1. Chiffre d'affaire par département")
     print("2. Noms des salariés par projet")
@@ -9,22 +9,22 @@ def menu():
     print("5. Salariés triés par ancienneté")
     print("6. Quitter")
     r = input("Que souhaitez vous faire : ")
-    if (r == "1"):
+    if (r == "1"): # On execute la fonction pour afficher le chiffre d'affaires par département
         chiffre_affaires_par_departement()
         menu()
-    elif (r == "2"):
+    elif (r == "2"): # On execute la fonction pour afficher le nom des salariés par projet
         noms_salaries_par_projet()
         menu()
-    elif (r == "3"):
+    elif (r == "3"): # On execute la fonction pour afficher les projets qui ont nécéssité le plus de moyens humains
         tri_par_moyens_humains()
         menu()
-    elif (r == "4"):
+    elif (r == "4"): # On execute la fonction pour afficher le nom des salariés qui travaillent dans un département
         noms_salaries_par_departement()
         menu()
-    elif (r == "5"):
+    elif (r == "5"): # On execute la fonction pour afficher les salariés par ordre d'ancienneté
         salaries_par_ordre_ancienete()
         menu()
-    elif (r != "6"):
+    elif (r != "6"): # Et si on répond quelque chose qui est ni ça
         menu()
 
 def chiffre_affaires_par_departement():
