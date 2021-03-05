@@ -15,6 +15,9 @@ def menu():
     elif (r == "2"):
         noms_salaries_par_projet()
         menu()
+    elif (r == "3"):
+        tri_par_moyens_humains()
+        menu()
     elif (r == "4"):
         noms_salaries_par_departement()
         menu()
@@ -53,7 +56,6 @@ def noms_salaries_par_projet():
     for i in projetsdb.id:
         nom_projet = projetsdb[projetsdb.id == i].nom_projet.unique()[0]
         projets[nom_projet] = []
-        cadres_projet = []
         for p in cadresdb.id_cadre:
             cadre = cadresdb[cadresdb.id_cadre == p]
             employe = employesdb[employesdb.id == p]
@@ -77,26 +79,71 @@ def noms_salaries_par_projet():
         print(" ")
 
 
-#def tri_par_moyens_humains():
+def tri_par_moyens_humains():
     # Afficher les projets qui ont nécessité le plus de moyens humains
+    print(" ")
+    print("Nom des projets par coût humain :")
+    projetsdb = pd.read_csv("projets.csv", delimiter=";")
+    cadresdb = pd.read_csv("cadres.csv", delimiter=";")
+    noncadresdb = pd.read_csv("non_cadres.csv", delimiter=";")
+    employesdb = pd.read_csv("employes.csv", delimiter=";")
+    projets = {}
+    for i in projetsdb.id:
+        nom_projet = projetsdb[projetsdb.id == i].nom_projet.unique()[0]
+        projets[nom_projet] = []
+        for p in cadresdb.id_cadre:
+            cadre = cadresdb[cadresdb.id_cadre == p]
+            employe = employesdb[employesdb.id == p]
+            nom = employe.nom.unique()[0] + " " + employe.prenom.unique()[0]
+            liste_projets = cadre.liste_projets.unique()[0].split(",")
+            for j in liste_projets:
+                if (int(i) == int(j)):
+                    projets[nom_projet].append(nom)
+        for p in noncadresdb.id_noncadre:
+            noncadre = noncadresdb[noncadresdb.id_noncadre == p]
+            employe = employesdb[employesdb.id == p]
+            nom = employe.nom.unique()[0] + " " + employe.prenom.unique()[0]
+            liste_projets = noncadre.liste_projets.unique()[0].split(",")
+            for j in liste_projets:
+                if (int(i) == int(j)):
+                    projets[nom_projet].append(nom)
+    len_projs = {}
+    for proj in projets:
+        len_projs[proj] = len(projets[proj])
+    len_projs = dict(sorted(len_projs.items(), key=lambda item: item[1]))
+    for proj_nom in len_projs:
+        print(proj_nom + " : " + str(len_projs[proj_nom]))
 
 def noms_salaries_par_departement():
+    departementsdb = pd.read_csv("departements.csv", delimiter=";")
     employesdb = pd.read_csv("employes.csv", delimiter=";")
+    g_dep = []
     print(" ")
     print("Nom des salariés par département :")
-    print("1. Employes secteur informatique")
-    print("2. Employes secteur mécanique")
-    print("3. Employes secteur électronique")
-    print("4. Employes secteur marketing")
+    print("1. Employés département informatique")
+    print("2. Employés département mécanique")
+    print("3. Employés département électronique")
+    print("4. Employés département marketing")
     r = input("Que souhaitez vous faire : ")
-    #if (r == "1"):
-
-    #elif (r == "2"):
-
-    #elif (r == "3"):
-
-    #elif (r == "4"):
-
+    if (r == "1"):
+        nom_departement = "informatique"
+    elif (r == "2"):
+        nom_departement = "mécanique"
+    elif (r == "3"):
+        nom_departement = "éléctronique"
+    elif (r == "4"):
+        nom_departement = "marketing"
+    id_departement = departementsdb[departementsdb.nom_departement == nom_departement].id.unique()[0]
+    for p in employesdb.id:
+        employe = employesdb[employesdb.id == p]
+        nom = employe.nom.unique()[0] + " " + employe.prenom.unique()[0]
+        departement = employe.id_departement.unique()[0]
+        if (str(departement) == str(id_departement)):
+            g_dep.append(nom)
+    print("Employés sur le département " + nom_departement + " :")
+    for emp in g_dep:
+        print("- " + emp)
+    print(" ")
 
 def salaries_par_ordre_ancienete():
     # Afficher les salariés par ordre d'ancienneté
