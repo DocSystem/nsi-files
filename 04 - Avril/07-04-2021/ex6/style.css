@@ -1,0 +1,13 @@
+body {
+  display: flex;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.image p {
+  text-align: center;
+}

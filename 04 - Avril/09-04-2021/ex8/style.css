@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+}
+
+td, th {
+  border: solid 1px #000;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.panier td, .panier th {
+  cursor: default;
+}
+
+td::first-letter {
+  text-transform: capitalize;
+}
+
+#popup {
+  border: solid 2px #999;
+  width: 150px;
+  text-align: center;
+  pointer-events: none;
+  position: fixed;
+  z-index: 10;
+  background: #eee;
+}
+
+.hidden {
+  display: none;
+}
