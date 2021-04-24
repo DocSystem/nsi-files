@@ -7,19 +7,19 @@
   </head>
   <body>
     <h2>Objets disponibles</h2>
-    <table>
-      <tr>
-        <td>aubergines</td>
-        <td>carrotes</td>
-        <td>courgettes</td>
-      </tr>
-      <tr>
-        <td>poivron</td>
-        <td>tomates</td>
-        <td>abricots</td>
-      </tr>
-    </table>
-    <div id="popup" class="hidden">
+    <div class="objets_table">
+      <div class="objets_line">
+        <div class="objet neumorphic neumorphic_clickable" style="color: purple;">aubergines</div>
+        <div class="objet neumorphic neumorphic_clickable" style="color: orange;">carrotes</div>
+        <div class="objet neumorphic neumorphic_clickable" style="color: green;">courgettes</div>
+      </div>
+      <div class="objets_line">
+        <div class="objet neumorphic neumorphic_clickable" style="color: green;">poivron</div>
+        <div class="objet neumorphic neumorphic_clickable" style="color: red;">tomates</div>
+        <div class="objet neumorphic neumorphic_clickable" style="color: orange;">abricots</div>
+      </div>
+    </div>
+    <div id="popup" class="hidden neumorphic">
       Prix au kilo pour <span id="popup_name"></span> : <b><span id="popup_price"></span>€</b><br>
       Cliquez pour acheter
     </div>

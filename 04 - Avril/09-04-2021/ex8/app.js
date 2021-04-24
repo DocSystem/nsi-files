@@ -1,4 +1,4 @@
-document.querySelectorAll("td").forEach((i) => {
+document.querySelectorAll("div.objet").forEach((i) => {
   i.setAttribute("onmouseenter", "showPrice(this, event)");
   i.setAttribute("onmouseleave", "hidePrice()");
   i.setAttribute("onmousemove", "movePrice(this, event)");
